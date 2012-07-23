@@ -19,7 +19,6 @@ dependencies[] = humanitarianresponse_ind_def
 dependencies[] = node_reference
 dependencies[] = number
 dependencies[] = options
-dependencies[] = references_dialog
 dependencies[] = strongarm
 dependencies[] = taxonomy
 features[ctools][] = strongarm:strongarm:1
@@ -56,4 +55,11 @@ features[views_view][] = indicator_data_export
 
 
 
+
+
+
+; Information added by drush on 2012-07-17
+version = "master-dev"
+project = "humanitarianresponse_ind_data"
+datestamp = "1342528276"
 
