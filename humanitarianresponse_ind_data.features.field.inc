@@ -10,7 +10,7 @@
 function humanitarianresponse_ind_data_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-indicator_data-field_cluster'
+  // Exported field: 'node-indicator_data-field_cluster'.
   $fields['node-indicator_data-field_cluster'] = array(
     'field_config' => array(
       'active' => '1',
@@ -18,6 +18,9 @@ function humanitarianresponse_ind_data_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_cluster',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -31,6 +34,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -54,7 +58,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 0,
+          'weight' => 1,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -66,7 +70,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_cluster',
       'label' => 'Cluster',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -75,7 +79,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '2',
+        'weight' => '4',
       ),
     ),
   );
@@ -646,77 +650,6 @@ function humanitarianresponse_ind_data_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-indicator_data-field_cluster'.
-  $fields['node-indicator_data-field_cluster'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_cluster',
-      'foreign keys' => array(
-        'tid' => array(
-          'columns' => array(
-            'tid' => 'tid',
-          ),
-          'table' => 'taxonomy_term_data',
-        ),
-      ),
-      'indexes' => array(
-        'tid' => array(
-          0 => 'tid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'taxonomy',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => array(
-            'vocabulary' => 'clusters',
-            'parent' => '0',
-          ),
-        ),
-      ),
-      'translatable' => '0',
-      'type' => 'taxonomy_term_reference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'indicator_data',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'taxonomy',
-          'settings' => array(),
-          'type' => 'taxonomy_term_reference_link',
-          'weight' => 1,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_cluster',
-      'label' => 'Cluster',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '4',
-      ),
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Cluster');
@@ -726,7 +659,6 @@ function humanitarianresponse_ind_data_field_default_fields() {
   t('Date');
   t('Geographic Location');
   t('Indicator');
-  t('Indicator Data');
   t('Need: Best Estimate');
   t('Need: Explanation');
   t('Target Coverage for this need, in the unit of the indicator( Mid-Year or Flash Appeal)');

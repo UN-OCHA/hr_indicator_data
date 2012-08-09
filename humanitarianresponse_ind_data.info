@@ -2,10 +2,9 @@ name = HumanitarianResponse Indicator Data
 description = HumanitarianResponse - Indicator Data
 core = 7.x
 package = Humanitarianresponse
+php = 5.2.4
 version = 7.x-1.0
 project = humanitarianresponse_ind_data
-features[features_api][] = api:1
-
 dependencies[] = autosave
 dependencies[] = ctools
 dependencies[] = date
@@ -14,15 +13,18 @@ dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = hs_taxonomy
 dependencies[] = humanitarianresponse_clusters
-dependencies[] = humanitarianresponse_locations
 dependencies[] = humanitarianresponse_ind_def
+dependencies[] = humanitarianresponse_locations
 dependencies[] = node_reference
 dependencies[] = number
 dependencies[] = options
+dependencies[] = rules
 dependencies[] = strongarm
 dependencies[] = taxonomy
+datestamp = 1342528276
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
 features[field][] = node-indicator_data-field_cluster
 features[field][] = node-indicator_data-field_ind_cov_explanation
 features[field][] = node-indicator_data-field_ind_coverage
@@ -33,6 +35,7 @@ features[field][] = node-indicator_data-field_ind_need_explanation
 features[field][] = node-indicator_data-field_ind_target
 features[field][] = node-indicator_data-field_locations
 features[node][] = indicator_data
+features[rules_config][] = rules_target_is_greater_then_need
 features[variable][] = auto_entitylabel_node_indicator_data
 features[variable][] = auto_entitylabel_pattern_node_indicator_data
 features[variable][] = auto_entitylabel_php_node_indicator_data
@@ -45,6 +48,7 @@ features[variable][] = comment_indicator_data
 features[variable][] = comment_preview_indicator_data
 features[variable][] = comment_subject_field_indicator_data
 features[variable][] = field_bundle_settings_node__indicator_data
+features[variable][] = language_content_type_indicator_data
 features[variable][] = menu_options_indicator_data
 features[variable][] = menu_parent_indicator_data
 features[variable][] = node_options_indicator_data
@@ -52,14 +56,3 @@ features[variable][] = node_preview_indicator_data
 features[variable][] = node_submitted_indicator_data
 features[views_view][] = indicator_data
 features[views_view][] = indicator_data_export
-
-
-
-
-
-
-; Information added by drush on 2012-07-17
-version = "master-dev"
-project = "humanitarianresponse_ind_data"
-datestamp = "1342528276"
-

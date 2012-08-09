@@ -1534,6 +1534,37 @@ function humanitarianresponse_ind_data_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['tab_options']['weight'] = '0';
+  $translatables['indicator_data'] = array(
+    t('Master'),
+    t('Indicator Data'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('Date'),
+    t('node/[nid]'),
+    t('Cluster'),
+    t('Indicator'),
+    t('Geographic Location'),
+    t('Need: Best Estimate'),
+    t('Current Target'),
+    t('Coverage: Best Estimate'),
+    t('Need: Explanation'),
+    t('Coverage: Explanation'),
+    t('Page'),
+    t('Download link'),
+    t('<div style="align:right">
+   Download: <a href="/export/indicator_data.xls"><img src="/sites/all/modules/views_data_export/images/xls.png" alt="Excel File"></a> <a href="/export/indicator_data.csv"><img src="/sites/all/modules/views_data_export/images/csv.png" alt="CSV File"></a> <a href="/export/indicator_data.xml"><img src="/sites/all/modules/views_data_export/images/xml.png" alt="XML File"></a>
+</div>'),
+    t('Charts'),
+    t('Cluster (field_cluster)'),
+    t('Geographic Location (field_locations)'),
+  );
   $export['indicator_data'] = $view;
 
   $view = new view;
@@ -1844,40 +1875,40 @@ function humanitarianresponse_ind_data_views_default_views() {
 
   /* Display: XLS Export */
   $handler = $view->new_display('views_data_export', 'XLS Export', 'views_data_export_1');
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'views_data_export_xls';
-  $handler->display->display_options['style_options']['provide_file'] = 0;
-  $handler->display->display_options['style_options']['parent_sort'] = 0;
-  $handler->display->display_options['path'] = 'export/indicator_data.xls';
-  $handler->display->display_options['sitename_title'] = 0;
-  $handler->display->display_options['use_batch'] = '0';
 
   /* Display: XML Export */
   $handler = $view->new_display('views_data_export', 'XML Export', 'views_data_export_2');
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'views_data_export_xml';
-  $handler->display->display_options['style_options']['provide_file'] = 0;
-  $handler->display->display_options['style_options']['parent_sort'] = 0;
-  $handler->display->display_options['style_options']['transform'] = 1;
-  $handler->display->display_options['style_options']['transform_type'] = 'camel';
-  $handler->display->display_options['path'] = 'export/indicator_data.xml';
-  $handler->display->display_options['use_batch'] = '0';
 
   /* Display: CSV Export */
   $handler = $view->new_display('views_data_export', 'CSV Export', 'views_data_export_3');
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
-  $handler->display->display_options['style_options']['provide_file'] = 0;
-  $handler->display->display_options['style_options']['parent_sort'] = 0;
-  $handler->display->display_options['style_options']['quote'] = 1;
-  $handler->display->display_options['style_options']['trim'] = 0;
-  $handler->display->display_options['style_options']['replace_newlines'] = 0;
-  $handler->display->display_options['style_options']['header'] = 1;
-  $handler->display->display_options['path'] = 'export/indicator_data.csv';
-  $handler->display->display_options['use_batch'] = '0';
+  $translatables['indicator_data_export'] = array(
+    t('Master'),
+    t('indicator_data'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('term from field_locations'),
+    t('cluster'),
+    t('date'),
+    t('indicator_id'),
+    t('IND-[field_ind_def_1-nid]'),
+    t('indicator'),
+    t('pcode'),
+    t('location'),
+    t('need'),
+    t('target'),
+    t('coverage'),
+    t('All'),
+    t('XLS Export'),
+    t('XML Export'),
+    t('CSV Export'),
+  );
   $export['indicator_data_export'] = $view;
 
   return $export;
