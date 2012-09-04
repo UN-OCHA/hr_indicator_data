@@ -33,6 +33,7 @@ features[field][] = node-indicator_data-field_ind_def
 features[field][] = node-indicator_data-field_ind_need
 features[field][] = node-indicator_data-field_ind_need_explanation
 features[field][] = node-indicator_data-field_ind_target
+features[field][] = node-indicator_data-field_ind_target_explanation
 features[field][] = node-indicator_data-field_locations
 features[node][] = indicator_data
 features[rules_config][] = rules_target_is_greater_then_need

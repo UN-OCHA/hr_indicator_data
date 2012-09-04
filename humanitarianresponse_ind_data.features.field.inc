@@ -56,7 +56,10 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => 1,
         ),
@@ -79,7 +82,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '2',
       ),
     ),
   );
@@ -120,7 +123,10 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
           'type' => 'text_default',
           'weight' => '8',
         ),
@@ -180,6 +186,8 @@ function humanitarianresponse_ind_data_field_default_fields() {
           'module' => 'number',
           'settings' => array(
             'decimal_separator' => '.',
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
             'prefix_suffix' => 0,
             'scale' => '2',
             'thousand_separator' => '',
@@ -254,6 +262,8 @@ function humanitarianresponse_ind_data_field_default_fields() {
           'label' => 'above',
           'module' => 'date',
           'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
             'format_type' => 'short',
             'fromto' => 'both',
             'multiple_from' => '',
@@ -356,7 +366,10 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'node_reference',
-          'settings' => array(),
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
           'type' => 'node_reference_default',
           'weight' => '3',
         ),
@@ -379,7 +392,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
@@ -413,6 +426,8 @@ function humanitarianresponse_ind_data_field_default_fields() {
           'module' => 'number',
           'settings' => array(
             'decimal_separator' => '.',
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
             'prefix_suffix' => 0,
             'scale' => '2',
             'thousand_separator' => '',
@@ -443,7 +458,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '6',
+        'weight' => '5',
       ),
     ),
   );
@@ -484,7 +499,10 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'text',
-          'settings' => array(),
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
           'type' => 'text_default',
           'weight' => '9',
         ),
@@ -510,7 +528,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '7',
+        'weight' => '6',
       ),
     ),
   );
@@ -544,6 +562,8 @@ function humanitarianresponse_ind_data_field_default_fields() {
           'module' => 'number',
           'settings' => array(
             'decimal_separator' => '.',
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
             'prefix_suffix' => 0,
             'scale' => '2',
             'thousand_separator' => '',
@@ -574,6 +594,109 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
+        'weight' => '7',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-indicator_data-field_ind_target_explanation'.
+  $fields['node-indicator_data-field_ind_target_explanation'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_ind_target_explanation',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'indicator_data',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => 10,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_ind_target_explanation',
+      'label' => 'Current Target: Explanation',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'php_code' => 'php_code',
+            'plain_text' => 'plain_text',
+            'simple' => 'simple',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'full_html' => array(
+                'weight' => '0',
+              ),
+              'php_code' => array(
+                'weight' => '11',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'simple' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
         'weight' => '8',
       ),
     ),
@@ -622,7 +745,10 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
-          'settings' => array(),
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
           'type' => 'taxonomy_term_reference_link',
           'weight' => '4',
         ),
@@ -645,7 +771,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
         'module' => 'hs_taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_hs',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -656,6 +782,7 @@ function humanitarianresponse_ind_data_field_default_fields() {
   t('Coverage: Best Estimate');
   t('Coverage: Explanation');
   t('Current Target');
+  t('Current Target: Explanation');
   t('Date');
   t('Geographic Location');
   t('Indicator');
