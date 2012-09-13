@@ -99,7 +99,7 @@ function humanitarianresponse_ind_data_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '12',
         ),
         'workflow' => array(
           'weight' => '10',
