@@ -57,4 +57,3 @@ features[variable][] = node_options_indicator_data
 features[variable][] = node_preview_indicator_data
 features[variable][] = node_submitted_indicator_data
 features[views_view][] = indicator_data
-features[views_view][] = indicator_data_export
