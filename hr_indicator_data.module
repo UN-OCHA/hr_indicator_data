@@ -2,24 +2,24 @@
 
 /**
  * @file
- * Code for the humanitarianresponse_ind_data feature.
+ * Code for the hr_indicator_data feature.
  */
 
-include_once 'humanitarianresponse_ind_data.features.inc';
+include_once 'hr_indicator_data.features.inc';
 
 /**
  * Implements hook_menu().
  */
-function humanitarianresponse_ind_data_menu() {
+function hr_indicator_data_menu() {
   $items['crf/indicator-data/table'] = array(
     'title' => 'Indicator Data',
-    'page callback' => 'humanitarianresponse_ind_data_table',
+    'page callback' => 'hr_indicator_data_table',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
   $items['crf/indicator-data/graph'] = array(
     'title' => 'Graph',
-    'page callback' => 'humanitarianresponse_ind_data_graph',
+    'page callback' => 'hr_indicator_data_graph',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
@@ -27,14 +27,14 @@ function humanitarianresponse_ind_data_menu() {
   return $items;
 }
 
-function humanitarianresponse_ind_data_table() {
+function hr_indicator_data_table() {
   $output = '';
   $output .= l('Graph', 'crf/indicator-data/graph');
   $output .= views_embed_view('indicator_data', 'table');
   return $output;
 }
 
-function humanitarianresponse_ind_data_graph() {
+function hr_indicator_data_graph() {
   $output = '';
   $output .= l('Table', 'crf/indicator-data/table');
   $output .= views_embed_view('indicator_data', 'graph');

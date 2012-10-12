@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * humanitarianresponse_ind_data.features.field.inc
+ * hr_indicator_data.features.field.inc
  */
 
 /**
  * Implements hook_field_default_fields().
  */
-function humanitarianresponse_ind_data_field_default_fields() {
+function hr_indicator_data_field_default_fields() {
   $fields = array();
 
   // Exported field: 'node-indicator_data-field_cluster'.
@@ -43,7 +43,6 @@ function humanitarianresponse_ind_data_field_default_fields() {
             'parent' => '0',
           ),
         ),
-        'options_list_callback' => 'humanitarianresponse_i18n_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -836,7 +835,6 @@ function humanitarianresponse_ind_data_field_default_fields() {
             'parent' => '0',
           ),
         ),
-        'options_list_callback' => 'humanitarianresponse_i18n_allowed_values',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',

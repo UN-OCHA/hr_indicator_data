@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * humanitarianresponse_ind_data.rules_defaults.inc
+ * hr_indicator_data.rules_defaults.inc
  */
 
 /**
  * Implements hook_default_rules_configuration().
  */
-function humanitarianresponse_ind_data_default_rules_configuration() {
+function hr_indicator_data_default_rules_configuration() {
   $items = array();
   $items['rules_target_is_greater_then_need'] = entity_import('rules_config', '{ "rules_target_is_greater_then_need" : {
       "LABEL" : "Target is greater then need",
