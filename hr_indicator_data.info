@@ -9,8 +9,8 @@ dependencies[] = date
 dependencies[] = diff
 dependencies[] = entityreference
 dependencies[] = features
-dependencies[] = hs_taxonomy
 dependencies[] = hr_indicator_definitions
+dependencies[] = hs_taxonomy
 dependencies[] = humanitarianresponse_clusters
 dependencies[] = humanitarianresponse_locations
 dependencies[] = node_reference
@@ -36,6 +36,11 @@ features[field][] = node-indicator_data-field_ind_target_explanation
 features[field][] = node-indicator_data-field_locations
 features[node][] = indicator_data
 features[rules_config][] = rules_target_is_greater_then_need
+features[user_permission][] = create indicator_data content
+features[user_permission][] = delete any indicator_data content
+features[user_permission][] = delete own indicator_data content
+features[user_permission][] = edit any indicator_data content
+features[user_permission][] = edit own indicator_data content
 features[variable][] = auto_entitylabel_node_indicator_data
 features[variable][] = auto_entitylabel_pattern_node_indicator_data
 features[variable][] = auto_entitylabel_php_node_indicator_data
@@ -58,5 +63,3 @@ features[views_view][] = indicator_data
 l10n path = http://localize.humanitarianresponse.info/sites/localize.humanitarianresponse.info/files/l10n_packager/%core/%project/%project-%release.%language.po
 l10n server = localize.humanitarianresponse.info
 l10n url = http://localize.humanitarianresponse.info/sites/localize.humanitarianresponse.info/files/l10n_packager/l10n_server.xml
-
-

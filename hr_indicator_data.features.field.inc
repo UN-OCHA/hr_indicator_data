@@ -43,6 +43,8 @@ function hr_indicator_data_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
+        'options_list_callback' => '',
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -113,7 +115,9 @@ function hr_indicator_data_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_long',
     ),
@@ -813,6 +817,9 @@ function hr_indicator_data_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_locations',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
