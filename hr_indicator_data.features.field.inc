@@ -63,7 +63,7 @@ function hr_indicator_data_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -135,7 +135,7 @@ function hr_indicator_data_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'text_default',
-          'weight' => 11,
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -301,6 +301,9 @@ function hr_indicator_data_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_ind_coverage',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -341,7 +344,7 @@ function hr_indicator_data_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_ind_coverage',
       'label' => 'Coverage: Best Estimate',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'max' => '',
         'min' => '',
@@ -352,10 +355,13 @@ function hr_indicator_data_field_default_fields() {
       'widget' => array(
         'active' => 0,
         'module' => 'number',
-        'settings' => array(),
+        'settings' => array(
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        ),
         'type' => 'number',
         'weight' => '9',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -452,6 +458,9 @@ function hr_indicator_data_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_ind_def',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'nid' => array(
           'columns' => array(
@@ -469,20 +478,27 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'node_reference',
       'settings' => array(
         'referenceable_types' => array(
+          '3w_data' => 0,
           'assessment' => 0,
+          'assessments_batch' => 0,
+          'chf_erf' => 0,
           'cluster_objectives' => 0,
           'contact' => 0,
+          'contacts_upload' => 0,
+          'crf_request' => 0,
           'document' => 0,
-          'event' => 0,
-          'highlight' => 0,
+          'fts_message' => 0,
+          'hr_sitrep' => 0,
+          'humanitarian_bulletin' => 0,
           'humanitarian_profile' => 0,
           'indicator_data' => 0,
+          'indicator_data_batch' => 0,
           'indicator_definition' => 'indicator_definition',
           'link' => 0,
-          'map' => 0,
-          'media_gallery' => 0,
-          'news' => 0,
+          'non_cluster_request' => 0,
           'page' => 0,
+          'pipeline_monitoring' => 0,
+          'sectoral_analysis' => 0,
         ),
         'view' => array(
           'args' => array(),
@@ -517,19 +533,24 @@ function hr_indicator_data_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
+      'entityconnect_unload_add' => '0',
+      'entityconnect_unload_edit' => '0',
       'field_name' => 'field_ind_def',
       'label' => 'Indicator',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
+        'settings' => array(
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        ),
         'type' => 'options_select',
         'weight' => '3',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -541,6 +562,9 @@ function hr_indicator_data_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_ind_need',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -581,7 +605,7 @@ function hr_indicator_data_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_ind_need',
       'label' => 'Need: Best Estimate',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'max' => '',
         'min' => '',
@@ -592,10 +616,13 @@ function hr_indicator_data_field_default_fields() {
       'widget' => array(
         'active' => 0,
         'module' => 'number',
-        'settings' => array(),
+        'settings' => array(
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        ),
         'type' => 'number',
         'weight' => '5',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -706,6 +733,9 @@ function hr_indicator_data_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_ind_target',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -746,7 +776,7 @@ function hr_indicator_data_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_ind_target',
       'label' => 'Current Target',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'max' => '',
         'min' => '',
@@ -757,10 +787,13 @@ function hr_indicator_data_field_default_fields() {
       'widget' => array(
         'active' => 0,
         'module' => 'number',
-        'settings' => array(),
+        'settings' => array(
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        ),
         'type' => 'number',
         'weight' => '7',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -808,7 +841,7 @@ function hr_indicator_data_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'text_default',
-          'weight' => 10,
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',

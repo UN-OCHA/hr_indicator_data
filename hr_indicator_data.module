@@ -27,6 +27,16 @@ function hr_indicator_data_menu() {
   return $items;
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function hr_indicator_data_form_indicator_data_node_form_alter(&$form, &$form_state, $form_id) {
+  if (module_exists('entityconnect') && isset($form_state['#entityconnect_child_form'])) {
+    $indicator_data_batch_input = $form_state['#entityconnect_child_form']->data['form_state']['input'];
+    $form['field_cluster']['und']['#default_value'] = $indicator_data_batch_input['field_cluster']['und'];
+  }
+}
+
 function hr_indicator_data_table() {
   $output = '';
   $output .= l('Graph', 'crf/indicator-data/graph');
