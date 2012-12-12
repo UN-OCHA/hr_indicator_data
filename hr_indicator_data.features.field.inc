@@ -458,56 +458,36 @@ function hr_indicator_data_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_ind_def',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
       'foreign keys' => array(
-        'nid' => array(
+        'node' => array(
           'columns' => array(
-            'nid' => 'nid',
+            'target_id' => 'nid',
           ),
           'table' => 'node',
         ),
       ),
       'indexes' => array(
-        'nid' => array(
-          0 => 'nid',
+        'target_entity' => array(
+          0 => 'target_id',
+        ),
+        'target_id' => array(
+          0 => 'target_id',
         ),
       ),
       'locked' => '0',
-      'module' => 'node_reference',
+      'module' => 'entityreference',
       'settings' => array(
-        'referenceable_types' => array(
-          '3w_data' => 0,
-          'assessment' => 0,
-          'assessments_batch' => 0,
-          'chf_erf' => 0,
-          'cluster_objectives' => 0,
-          'contact' => 0,
-          'contacts_upload' => 0,
-          'crf_request' => 0,
-          'document' => 0,
-          'fts_message' => 0,
-          'hr_sitrep' => 0,
-          'humanitarian_bulletin' => 0,
-          'humanitarian_profile' => 0,
-          'indicator_data' => 0,
-          'indicator_data_batch' => 0,
-          'indicator_definition' => 'indicator_definition',
-          'link' => 0,
-          'non_cluster_request' => 0,
-          'page' => 0,
-          'pipeline_monitoring' => 0,
-          'sectoral_analysis' => 0,
+        'handler' => 'base',
+        'handler_settings' => array(
+          'target_bundles' => array(
+            'indicator_definition' => 'indicator_definition',
+          ),
         ),
-        'view' => array(
-          'args' => array(),
-          'display_name' => '',
-          'view_name' => '',
-        ),
+        'handler_submit' => 'Change handler',
+        'target_type' => 'node',
       ),
       'translatable' => '0',
-      'type' => 'node_reference',
+      'type' => 'entityreference',
     ),
     'field_instance' => array(
       'bundle' => 'indicator_data',
@@ -517,24 +497,28 @@ function hr_indicator_data_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'node_reference',
+          'module' => 'entityreference',
           'settings' => array(
             'diff_custom' => 0,
             'diff_custom_settings' => array(),
+            'link' => TRUE,
           ),
-          'type' => 'node_reference_default',
+          'type' => 'entityreference_label',
           'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
+          'module' => 'entityreference',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+            'link' => TRUE,
+          ),
+          'type' => 'entityreference_label',
           'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
-      'entityconnect_unload_add' => '0',
-      'entityconnect_unload_edit' => '0',
       'field_name' => 'field_ind_def',
       'label' => 'Indicator',
       'required' => 1,
@@ -543,14 +527,15 @@ function hr_indicator_data_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
+        'module' => 'entityreference',
         'settings' => array(
-          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => 60,
         ),
-        'type' => 'options_select',
+        'type' => 'entityreference_autocomplete',
         'weight' => '3',
       ),
-      'workbench_access_field' => 0,
     ),
   );
 
