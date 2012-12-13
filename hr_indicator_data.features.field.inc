@@ -65,6 +65,16 @@ function hr_indicator_data_field_default_fields() {
           'type' => 'taxonomy_term_reference_link',
           'weight' => '1',
         ),
+        'entityreference_view_widget' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '1',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -128,6 +138,16 @@ function hr_indicator_data_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => '11',
+        ),
+        'entityreference_view_widget' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(
@@ -240,6 +260,16 @@ function hr_indicator_data_field_default_fields() {
           'type' => 'text_default',
           'weight' => '8',
         ),
+        'entityreference_view_widget' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => '8',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -334,6 +364,20 @@ function hr_indicator_data_field_default_fields() {
           'type' => 'number_decimal',
           'weight' => '7',
         ),
+        'entityreference_view_widget' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+            'prefix_suffix' => 0,
+            'scale' => '2',
+            'thousand_separator' => '',
+          ),
+          'type' => 'number_decimal',
+          'weight' => '7',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -415,6 +459,21 @@ function hr_indicator_data_field_default_fields() {
           'type' => 'date_default',
           'weight' => '0',
         ),
+        'entityreference_view_widget' => array(
+          'label' => 'above',
+          'module' => 'date',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+            'format_type' => 'short',
+            'fromto' => 'both',
+            'multiple_from' => '',
+            'multiple_number' => '',
+            'multiple_to' => '',
+          ),
+          'type' => 'date_default',
+          'weight' => '0',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -454,10 +513,13 @@ function hr_indicator_data_field_default_fields() {
   $fields['node-indicator_data-field_ind_def'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_ind_def',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'node' => array(
           'columns' => array(
@@ -479,6 +541,14 @@ function hr_indicator_data_field_default_fields() {
       'settings' => array(
         'handler' => 'base',
         'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'type' => 'none',
+          ),
           'target_bundles' => array(
             'indicator_definition' => 'indicator_definition',
           ),
@@ -501,9 +571,22 @@ function hr_indicator_data_field_default_fields() {
           'settings' => array(
             'diff_custom' => 0,
             'diff_custom_settings' => array(),
-            'link' => TRUE,
+            'links' => 0,
+            'view_mode' => 'teaser',
           ),
-          'type' => 'entityreference_label',
+          'type' => 'entityreference_entity_view',
+          'weight' => '3',
+        ),
+        'entityreference_view_widget' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+            'links' => 1,
+            'view_mode' => 'full',
+          ),
+          'type' => 'entityreference_entity_view',
           'weight' => '3',
         ),
         'teaser' => array(
@@ -519,6 +602,8 @@ function hr_indicator_data_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
+      'entityconnect_unload_add' => '0',
+      'entityconnect_unload_edit' => '0',
       'field_name' => 'field_ind_def',
       'label' => 'Indicator',
       'required' => 1,
@@ -527,15 +612,16 @@ function hr_indicator_data_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'entityreference',
+        'module' => 'entityreference_view_widget',
         'settings' => array(
-          'match_operator' => 'CONTAINS',
-          'path' => '',
-          'size' => 60,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'pass_argument' => 0,
+          'view' => 'indicator_definitions|entityreference_view_widget_1',
         ),
-        'type' => 'entityreference_autocomplete',
+        'type' => 'entityreference_view_widget',
         'weight' => '3',
       ),
+      'workbench_access_field' => 0,
     ),
   );
 
@@ -567,6 +653,20 @@ function hr_indicator_data_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+            'prefix_suffix' => 0,
+            'scale' => '2',
+            'thousand_separator' => '',
+          ),
+          'type' => 'number_decimal',
+          'weight' => '5',
+        ),
+        'entityreference_view_widget' => array(
           'label' => 'above',
           'module' => 'number',
           'settings' => array(
@@ -648,6 +748,16 @@ function hr_indicator_data_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => '9',
+        ),
+        'entityreference_view_widget' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(
@@ -751,6 +861,20 @@ function hr_indicator_data_field_default_fields() {
           'type' => 'number_decimal',
           'weight' => '6',
         ),
+        'entityreference_view_widget' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+            'prefix_suffix' => 0,
+            'scale' => '2',
+            'thousand_separator' => '',
+          ),
+          'type' => 'number_decimal',
+          'weight' => '6',
+        ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
@@ -819,6 +943,16 @@ function hr_indicator_data_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => '10',
+        ),
+        'entityreference_view_widget' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(
@@ -925,6 +1059,16 @@ function hr_indicator_data_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => '4',
+        ),
+        'entityreference_view_widget' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(

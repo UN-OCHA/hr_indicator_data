@@ -109,7 +109,7 @@ function hr_indicator_data_strongarm() {
         'custom_settings' => FALSE,
       ),
       'entityreference_view_widget' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'print' => array(
         'custom_settings' => FALSE,
