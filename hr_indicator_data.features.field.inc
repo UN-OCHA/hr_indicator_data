@@ -87,6 +87,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Cluster',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -199,6 +200,7 @@ function hr_indicator_data_field_default_fields() {
             ),
           ),
         ),
+        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -240,7 +242,9 @@ function hr_indicator_data_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_long',
     ),
@@ -308,6 +312,7 @@ function hr_indicator_data_field_default_fields() {
             ),
           ),
         ),
+        'entity_translation_sync' => FALSE,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
@@ -340,6 +345,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -390,6 +396,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Coverage: Best Estimate',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -426,6 +433,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -468,6 +476,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Coverage: Best Estimate (Female)',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -504,6 +513,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -546,6 +556,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Coverage: Best Estimate (Male)',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -580,6 +591,7 @@ function hr_indicator_data_field_default_fields() {
       'settings' => array(
         'cache_count' => '4',
         'cache_enabled' => 0,
+        'entity_translation_sync' => FALSE,
         'granularity' => array(
           'day' => 'day',
           'hour' => 0,
@@ -646,6 +658,7 @@ function hr_indicator_data_field_default_fields() {
         'default_value2' => 'same',
         'default_value_code' => '',
         'default_value_code2' => '',
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -695,6 +708,7 @@ function hr_indicator_data_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
@@ -764,6 +778,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Indicator',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -798,6 +813,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -848,6 +864,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Need: Best Estimate',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -893,7 +910,9 @@ function hr_indicator_data_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_long',
     ),
@@ -961,6 +980,7 @@ function hr_indicator_data_field_default_fields() {
             ),
           ),
         ),
+        'entity_translation_sync' => FALSE,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
@@ -993,6 +1013,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -1035,6 +1056,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Need: Best Estimate (Female)',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -1071,6 +1093,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -1113,6 +1136,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Need: Best Estimate (Male)',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -1149,6 +1173,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -1199,6 +1224,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Current Target',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -1244,7 +1270,9 @@ function hr_indicator_data_field_default_fields() {
       ),
       'locked' => '0',
       'module' => 'text',
-      'settings' => array(),
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
       'translatable' => '0',
       'type' => 'text_long',
     ),
@@ -1312,6 +1340,7 @@ function hr_indicator_data_field_default_fields() {
             ),
           ),
         ),
+        'entity_translation_sync' => FALSE,
         'text_processing' => '1',
         'user_register_form' => FALSE,
       ),
@@ -1344,6 +1373,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -1386,6 +1416,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Current Target (Female)',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -1422,6 +1453,7 @@ function hr_indicator_data_field_default_fields() {
       'module' => 'number',
       'settings' => array(
         'decimal_separator' => '.',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'number_float',
@@ -1464,6 +1496,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Current Target (Male)',
       'required' => 0,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -1516,6 +1549,7 @@ function hr_indicator_data_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
       'type' => 'taxonomy_term_reference',
@@ -1558,6 +1592,7 @@ function hr_indicator_data_field_default_fields() {
       'label' => 'Geographic Location',
       'required' => 1,
       'settings' => array(
+        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(

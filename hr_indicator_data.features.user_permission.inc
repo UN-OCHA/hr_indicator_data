@@ -14,9 +14,9 @@ function hr_indicator_data_user_default_permissions() {
   $permissions['create indicator_data content'] = array(
     'name' => 'create indicator_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -25,9 +25,9 @@ function hr_indicator_data_user_default_permissions() {
   $permissions['delete any indicator_data content'] = array(
     'name' => 'delete any indicator_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -36,9 +36,9 @@ function hr_indicator_data_user_default_permissions() {
   $permissions['delete own indicator_data content'] = array(
     'name' => 'delete own indicator_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -47,9 +47,9 @@ function hr_indicator_data_user_default_permissions() {
   $permissions['edit any indicator_data content'] = array(
     'name' => 'edit any indicator_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
@@ -58,9 +58,9 @@ function hr_indicator_data_user_default_permissions() {
   $permissions['edit own indicator_data content'] = array(
     'name' => 'edit own indicator_data content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'manager',
+      'administrator' => 'administrator',
+      'editor' => 'editor',
+      'manager' => 'manager',
     ),
     'module' => 'node',
   );
