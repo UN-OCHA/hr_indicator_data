@@ -352,7 +352,11 @@ function hr_indicator_data_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'indicator_data',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => '0',
+        ),
+      ),
       'deleted' => '0',
       'description' => 'The best estimate of actual coverage for this need(e.g. including known work without reported figures), if available',
       'display' => array(
@@ -440,7 +444,11 @@ function hr_indicator_data_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'indicator_data',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => '0',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -520,7 +528,11 @@ function hr_indicator_data_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'indicator_data',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => '0',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -862,7 +874,7 @@ function hr_indicator_data_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_ind_need',
       'label' => 'Need: Best Estimate',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'entity_translation_sync' => FALSE,
         'max' => '',
