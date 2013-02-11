@@ -694,7 +694,7 @@ function hr_indicator_data_field_default_fields() {
   $fields['node-indicator_data-field_ind_def'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '-1',
+      'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_ind_def',
@@ -795,13 +795,11 @@ function hr_indicator_data_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'entityreference_view_widget',
+        'module' => 'options',
         'settings' => array(
           'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-          'pass_argument' => 0,
-          'view' => 'indicator_definitions|entityreference_view_widget_1',
         ),
-        'type' => 'entityreference_view_widget',
+        'type' => 'options_select',
         'weight' => '3',
       ),
       'workbench_access_field' => 0,

@@ -27,40 +27,6 @@ function hr_indicator_data_menu() {
   return $items;
 }
 
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function hr_indicator_data_form_indicator_data_node_form_alter(&$form, &$form_state, $form_id) {
-  if (module_exists('entityconnect') && isset($form_state['#entityconnect_child_form'])) {
-    $indicator_data_batch_input = $form_state['#entityconnect_child_form']->data['form_state']['input'];
-    foreach (array_keys($indicator_data_batch_input) as $key) {
-      if (substr($key, 0, 17) == 'add_entityconnect' || substr($key, 0, 18) == 'edit_entityconnect') {
-        if (strpos($key, 'situational_indicator_data')) {
-          $form['field_ind_target']['und'][0]['value']['#required'] = FALSE;
-
-          $entity_ids = array_keys($form['field_ind_def']['und']['add']);
-          foreach ($entity_ids as $entity_id) {
-            $node = node_load($entity_id);
-            if ($node->field_ind_sit_perf['und'][0]['value'] != 'situational') {
-              unset($form['field_ind_def']['und']['add'][$entity_id]);
-            }
-          }          
-        }
-        else {
-          $entity_ids = array_keys($form['field_ind_def']['und']['add']);
-          foreach ($entity_ids as $entity_id) {
-            $node = node_load($entity_id);
-            if ($node->field_ind_sit_perf['und'][0]['value'] != 'performance') {
-              unset($form['field_ind_def']['und']['add'][$entity_id]);
-            }
-          }
-        }
-      }
-    }
-    $form['field_cluster']['und']['#default_value'] = $indicator_data_batch_input['field_cluster']['und'];
-  }
-}
-
 function hr_indicator_data_table() {
   $output = '';
   $output .= l('Graph', 'crf/indicator-data/graph');
