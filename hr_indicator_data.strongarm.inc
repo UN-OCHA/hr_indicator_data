@@ -124,7 +124,7 @@ function hr_indicator_data_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '18',
+          'weight' => '19',
         ),
         'workflow' => array(
           'weight' => '10',

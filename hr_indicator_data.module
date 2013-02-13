@@ -27,6 +27,19 @@ function hr_indicator_data_menu() {
   return $items;
 }
 
+/**
+ * Implements hook_theme().
+ */
+function hr_indicator_data_theme($existing, $type, $theme, $path) {
+  return array(
+    'indicator_data_node_form' => array(
+      'template' => 'indicator-data-node-form',
+      'render element' => 'form',
+      'path' => drupal_get_path('module', 'hr_indicator_data') . '/templates',
+    ),
+  );
+}
+
 function hr_indicator_data_table() {
   $output = '';
   $output .= l('Graph', 'crf/indicator-data/graph');
@@ -40,4 +53,43 @@ function hr_indicator_data_graph() {
   $output .= views_embed_view('indicator_data', 'graph');
   return $output;
 }
+
+function hr_indicator_data_preprocess_indicator_data_node_form(&$variables) {
+  $form = &$variables['form'];
+  
+  $headers = array('', t('Estimate'), t('Female'), t('Male'));
+  
+  $rows = array(
+    array(
+      t('Need'),
+      drupal_render($form['field_ind_need']),
+      drupal_render($form['field_ind_need_female']),
+      drupal_render($form['field_ind_need_male']),
+    ),
+    array(
+      t('Target'),
+      drupal_render($form['field_ind_target']),
+      drupal_render($form['field_ind_target_female']),
+      drupal_render($form['field_ind_target_male']),
+    ),
+    array(
+      t('Coverage'),
+      drupal_render($form['field_ind_coverage']),
+      drupal_render($form['field_ind_coverage_female']),
+      drupal_render($form['field_ind_coverage_male']),
+    ),
+  );
+  
+  $variables['indicators'] = theme('table', array(
+    'header' => $headers,
+    'rows' => $rows,
+    'attributes' => array('class' => 'hr-indicator-data-indicators'),
+    'caption' => '',
+    'colgroups' => array(),
+    'sticky' => array(),
+    'empty' => array(),
+  ));
+}
+
+
 

@@ -211,119 +211,7 @@ function hr_indicator_data_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '17',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-indicator_data-field_ind_cov_explanation'.
-  $fields['node-indicator_data-field_ind_cov_explanation'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_ind_cov_explanation',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'indicator_data',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-          ),
-          'type' => 'text_default',
-          'weight' => '8',
-        ),
-        'entityreference_view_widget' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-          ),
-          'type' => 'text_default',
-          'weight' => '8',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_ind_cov_explanation',
-      'label' => 'Coverage: Explanation',
-      'required' => 0,
-      'settings' => array(
-        'better_formats' => array(
-          'allowed_formats' => array(
-            'filtered_html' => 'filtered_html',
-            'full_html' => 'full_html',
-            'plain_text' => 'plain_text',
-            'simple' => 'simple',
-          ),
-          'allowed_formats_toggle' => 0,
-          'default_order_toggle' => 0,
-          'default_order_wrapper' => array(
-            'formats' => array(
-              'filtered_html' => array(
-                'weight' => '0',
-              ),
-              'full_html' => array(
-                'weight' => '0',
-              ),
-              'plain_text' => array(
-                'weight' => '10',
-              ),
-              'simple' => array(
-                'weight' => '0',
-              ),
-            ),
-          ),
-        ),
-        'entity_translation_sync' => FALSE,
-        'text_processing' => '1',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '5',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '16',
+        'weight' => '18',
       ),
     ),
   );
@@ -806,6 +694,119 @@ function hr_indicator_data_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-indicator_data-field_ind_explanation'.
+  $fields['node-indicator_data-field_ind_explanation'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_ind_explanation',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'indicator_data',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => 18,
+        ),
+        'entityreference_view_widget' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_ind_explanation',
+      'label' => 'Explanation',
+      'required' => 0,
+      'settings' => array(
+        'better_formats' => array(
+          'allowed_formats' => array(
+            'filtered_html' => 'filtered_html',
+            'full_html' => 'full_html',
+            'plain_text' => 'plain_text',
+            'simple' => 'simple',
+          ),
+          'allowed_formats_toggle' => 0,
+          'default_order_toggle' => 0,
+          'default_order_wrapper' => array(
+            'formats' => array(
+              'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'full_html' => array(
+                'weight' => '0',
+              ),
+              'plain_text' => array(
+                'weight' => '10',
+              ),
+              'simple' => array(
+                'weight' => '0',
+              ),
+            ),
+          ),
+        ),
+        'entity_translation_sync' => FALSE,
+        'text_processing' => '1',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'maxlength_js' => '',
+          'maxlength_js_enforce' => 0,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'maxlength_js_truncate_html' => 0,
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '17',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
   // Exported field: 'node-indicator_data-field_ind_need'.
   $fields['node-indicator_data-field_ind_need'] = array(
     'field_config' => array(
@@ -891,118 +892,6 @@ function hr_indicator_data_field_default_fields() {
         'weight' => '5',
       ),
       'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-indicator_data-field_ind_need_explanation'.
-  $fields['node-indicator_data-field_ind_need_explanation'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_ind_need_explanation',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'indicator_data',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-          ),
-          'type' => 'text_default',
-          'weight' => '9',
-        ),
-        'entityreference_view_widget' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-          ),
-          'type' => 'text_default',
-          'weight' => '9',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_ind_need_explanation',
-      'label' => 'Need: Explanation',
-      'required' => 0,
-      'settings' => array(
-        'better_formats' => array(
-          'allowed_formats' => array(
-            'filtered_html' => 'filtered_html',
-            'full_html' => 'full_html',
-            'plain_text' => 'plain_text',
-            'simple' => 'simple',
-          ),
-          'allowed_formats_toggle' => 0,
-          'default_order_toggle' => 0,
-          'default_order_wrapper' => array(
-            'formats' => array(
-              'filtered_html' => array(
-                'weight' => '0',
-              ),
-              'full_html' => array(
-                'weight' => '0',
-              ),
-              'plain_text' => array(
-                'weight' => '10',
-              ),
-              'simple' => array(
-                'weight' => '0',
-              ),
-            ),
-          ),
-        ),
-        'entity_translation_sync' => FALSE,
-        'text_processing' => '1',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '5',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '8',
-      ),
     ),
   );
 
@@ -1251,118 +1140,6 @@ function hr_indicator_data_field_default_fields() {
         'weight' => '9',
       ),
       'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'node-indicator_data-field_ind_target_explanation'.
-  $fields['node-indicator_data-field_ind_target_explanation'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_ind_target_explanation',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-      ),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'indicator_data',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-          ),
-          'type' => 'text_default',
-          'weight' => '10',
-        ),
-        'entityreference_view_widget' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(
-            'diff_custom' => 0,
-            'diff_custom_settings' => array(),
-          ),
-          'type' => 'text_default',
-          'weight' => '10',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_ind_target_explanation',
-      'label' => 'Current Target: Explanation',
-      'required' => 0,
-      'settings' => array(
-        'better_formats' => array(
-          'allowed_formats' => array(
-            'filtered_html' => 'filtered_html',
-            'full_html' => 'full_html',
-            'plain_text' => 'plain_text',
-            'simple' => 'simple',
-          ),
-          'allowed_formats_toggle' => 0,
-          'default_order_toggle' => 0,
-          'default_order_wrapper' => array(
-            'formats' => array(
-              'filtered_html' => array(
-                'weight' => '0',
-              ),
-              'full_html' => array(
-                'weight' => '0',
-              ),
-              'plain_text' => array(
-                'weight' => '10',
-              ),
-              'simple' => array(
-                'weight' => '0',
-              ),
-            ),
-          ),
-        ),
-        'entity_translation_sync' => FALSE,
-        'text_processing' => '1',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '5',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '12',
-      ),
     ),
   );
 
@@ -1622,18 +1399,16 @@ function hr_indicator_data_field_default_fields() {
   t('Coverage: Best Estimate');
   t('Coverage: Best Estimate (Female)');
   t('Coverage: Best Estimate (Male)');
-  t('Coverage: Explanation');
   t('Current Target');
   t('Current Target (Female)');
   t('Current Target (Male)');
-  t('Current Target: Explanation');
   t('Date');
+  t('Explanation');
   t('Geographic Location');
   t('Indicator');
   t('Need: Best Estimate');
   t('Need: Best Estimate (Female)');
   t('Need: Best Estimate (Male)');
-  t('Need: Explanation');
   t('Target Coverage for this need, in the unit of the indicator( Mid-Year or Flash Appeal)');
   t('The best estimate of actual coverage for this need(e.g. including known work without reported figures), if available');
 
