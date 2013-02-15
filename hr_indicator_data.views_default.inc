@@ -30,7 +30,6 @@ function hr_indicator_data_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -98,7 +97,6 @@ function hr_indicator_data_views_default_views() {
   $handler->display->display_options['fields']['field_ind_def']['table'] = 'field_data_field_ind_def';
   $handler->display->display_options['fields']['field_ind_def']['field'] = 'field_ind_def';
   $handler->display->display_options['fields']['field_ind_def']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ind_def']['type'] = 'node_reference_plain';
   /* Field: Content: Location */
   $handler->display->display_options['fields']['field_locations']['id'] = 'field_locations';
   $handler->display->display_options['fields']['field_locations']['table'] = 'field_data_field_locations';
