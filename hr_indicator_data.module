@@ -27,6 +27,22 @@ function hr_indicator_data_menu() {
   return $items;
 }
 
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function hr_indicator_data_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form['#id']) {
+    case 'views-exposed-form-indicator-data-table':
+    case 'views-exposed-form-indicator-data-graph':
+      $form['field_crf_request_target_id'] = hr_indicator_data_convert_form_textfield('crf_request');
+      $form['field_ind_def_target_id'] = hr_indicator_data_convert_form_textfield('indicator_definition');
+      $form['field_cluster_obj_target_id'] = hr_indicator_data_convert_form_textfield('cluster_objectives');
+      break;
+  }
+}
+
+
 /**
  * Implements hook_theme().
  */
@@ -91,5 +107,23 @@ function hr_indicator_data_preprocess_indicator_data_node_form(&$variables) {
   ));
 }
 
-
+function hr_indicator_data_convert_form_textfield($content_type) {
+  $options = array('' => '- Any -');
+  $query = new EntityFieldQuery();
+  $result = $query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', $content_type)
+    ->execute();
+  if (!empty($result)) {
+    foreach (array_keys($result['node']) as $nid) {
+      $node = node_load($nid);
+      $options[$nid] = $node->title;
+    }
+  }
+  return array(
+    '#type' => 'select',
+    '#options' => $options,
+    '#default_value' => '',
+  );
+}
 

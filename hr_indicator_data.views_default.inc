@@ -86,6 +86,16 @@ function hr_indicator_data_views_default_views() {
       'empty_column' => 0,
     ),
   );
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_indicator_data_node']['id'] = 'reverse_field_indicator_data_node';
+  $handler->display->display_options['relationships']['reverse_field_indicator_data_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_indicator_data_node']['field'] = 'reverse_field_indicator_data_node';
+  $handler->display->display_options['relationships']['reverse_field_indicator_data_node']['label'] = 'Indicator Values referenced from field_indicator_data';
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_ind_def_target_id']['id'] = 'field_ind_def_target_id';
+  $handler->display->display_options['relationships']['field_ind_def_target_id']['table'] = 'field_data_field_ind_def';
+  $handler->display->display_options['relationships']['field_ind_def_target_id']['field'] = 'field_ind_def_target_id';
+  $handler->display->display_options['relationships']['field_ind_def_target_id']['label'] = 'Indicator Definition referenced from field_ind_def';
   /* Field: Content: Cluster */
   $handler->display->display_options['fields']['field_cluster']['id'] = 'field_cluster';
   $handler->display->display_options['fields']['field_cluster']['table'] = 'field_data_field_cluster';
@@ -199,6 +209,81 @@ function hr_indicator_data_views_default_views() {
   $handler->display->display_options['filters']['field_locations_tid']['expose']['identifier'] = 'field_locations_tid';
   $handler->display->display_options['filters']['field_locations_tid']['vocabulary'] = 'locations';
   $handler->display->display_options['filters']['field_locations_tid']['hierarchy'] = 1;
+  /* Filter criterion: Content: Request (field_crf_request) */
+  $handler->display->display_options['filters']['field_crf_request_target_id']['id'] = 'field_crf_request_target_id';
+  $handler->display->display_options['filters']['field_crf_request_target_id']['table'] = 'field_data_field_crf_request';
+  $handler->display->display_options['filters']['field_crf_request_target_id']['field'] = 'field_crf_request_target_id';
+  $handler->display->display_options['filters']['field_crf_request_target_id']['relationship'] = 'reverse_field_indicator_data_node';
+  $handler->display->display_options['filters']['field_crf_request_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_crf_request_target_id']['expose']['operator_id'] = 'field_crf_request_target_id_op';
+  $handler->display->display_options['filters']['field_crf_request_target_id']['expose']['label'] = 'Request';
+  $handler->display->display_options['filters']['field_crf_request_target_id']['expose']['operator'] = 'field_crf_request_target_id_op';
+  $handler->display->display_options['filters']['field_crf_request_target_id']['expose']['identifier'] = 'field_crf_request_target_id';
+  $handler->display->display_options['filters']['field_crf_request_target_id']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_crf_request_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    218860149 => 0,
+    200153887 => 0,
+    52310416 => 0,
+    30037204 => 0,
+  );
+  /* Filter criterion: Content: Indicator (field_ind_def) */
+  $handler->display->display_options['filters']['field_ind_def_target_id']['id'] = 'field_ind_def_target_id';
+  $handler->display->display_options['filters']['field_ind_def_target_id']['table'] = 'field_data_field_ind_def';
+  $handler->display->display_options['filters']['field_ind_def_target_id']['field'] = 'field_ind_def_target_id';
+  $handler->display->display_options['filters']['field_ind_def_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_ind_def_target_id']['expose']['operator_id'] = 'field_ind_def_target_id_op';
+  $handler->display->display_options['filters']['field_ind_def_target_id']['expose']['label'] = 'Indicator';
+  $handler->display->display_options['filters']['field_ind_def_target_id']['expose']['operator'] = 'field_ind_def_target_id_op';
+  $handler->display->display_options['filters']['field_ind_def_target_id']['expose']['identifier'] = 'field_ind_def_target_id';
+  $handler->display->display_options['filters']['field_ind_def_target_id']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_ind_def_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    218860149 => 0,
+    200153887 => 0,
+    52310416 => 0,
+    30037204 => 0,
+  );
+  /* Filter criterion: Content: Cluster Objective (field_cluster_obj) */
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['id'] = 'field_cluster_obj_target_id';
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['table'] = 'field_data_field_cluster_obj';
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['field'] = 'field_cluster_obj_target_id';
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['relationship'] = 'field_ind_def_target_id';
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['expose']['operator_id'] = 'field_cluster_obj_target_id_op';
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['expose']['label'] = 'Cluster Objective';
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['expose']['operator'] = 'field_cluster_obj_target_id_op';
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['expose']['identifier'] = 'field_cluster_obj_target_id';
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['field_cluster_obj_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    218860149 => 0,
+    200153887 => 0,
+    52310416 => 0,
+    30037204 => 0,
+  );
+  /* Filter criterion: Workbench Moderation: State */
+  $handler->display->display_options['filters']['state']['id'] = 'state';
+  $handler->display->display_options['filters']['state']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['filters']['state']['field'] = 'state';
+  $handler->display->display_options['filters']['state']['relationship'] = 'reverse_field_indicator_data_node';
+  $handler->display->display_options['filters']['state']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['state']['expose']['operator_id'] = 'state_op';
+  $handler->display->display_options['filters']['state']['expose']['label'] = 'State';
+  $handler->display->display_options['filters']['state']['expose']['operator'] = 'state_op';
+  $handler->display->display_options['filters']['state']['expose']['identifier'] = 'state';
+  $handler->display->display_options['filters']['state']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['state']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    218860149 => 0,
+    200153887 => 0,
+    52310416 => 0,
+    30037204 => 0,
+  );
 
   /* Display: Table */
   $handler = $view->new_display('block', 'Table', 'table');
@@ -255,6 +340,8 @@ function hr_indicator_data_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('Indicator Values referenced from field_indicator_data'),
+    t('Indicator Definition referenced from field_ind_def'),
     t('Cluster'),
     t('Indicator'),
     t('Location'),
@@ -263,6 +350,9 @@ function hr_indicator_data_views_default_views() {
     t('Coverage: Best Estimate'),
     t('Date'),
     t('Geographic Location'),
+    t('Request'),
+    t('Cluster Objective'),
+    t('State'),
     t('Table'),
     t('Graph'),
   );
