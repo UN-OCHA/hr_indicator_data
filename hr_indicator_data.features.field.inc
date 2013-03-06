@@ -130,7 +130,9 @@ function hr_indicator_data_field_default_fields() {
         ),
       ),
       'deleted' => '0',
-      'description' => 'The best estimate of actual coverage for this need(e.g. including known work without reported figures), if available',
+      'description' => 'The best estimate of actual coverage<br />
+for this need (e.g. including known work<br />
+without reported figures), if available',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -965,7 +967,9 @@ function hr_indicator_data_field_default_fields() {
       'bundle' => 'indicator_data',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Target Coverage for this need, in the unit of the indicator( Mid-Year or Flash Appeal)',
+      'description' => 'Target Coverage for this need,<br />
+in the unit of the indicator<br />
+(Mid-Year or Flash Appeal)',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1292,8 +1296,12 @@ function hr_indicator_data_field_default_fields() {
   t('Need: Best Estimate');
   t('Need: Best Estimate (Female)');
   t('Need: Best Estimate (Male)');
-  t('Target Coverage for this need, in the unit of the indicator( Mid-Year or Flash Appeal)');
-  t('The best estimate of actual coverage for this need(e.g. including known work without reported figures), if available');
+  t('Target Coverage for this need,<br />
+in the unit of the indicator<br />
+(Mid-Year or Flash Appeal)');
+  t('The best estimate of actual coverage<br />
+for this need (e.g. including known work<br />
+without reported figures), if available');
 
   return $fields;
 }
