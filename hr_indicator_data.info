@@ -22,7 +22,6 @@ dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
-dependencies[] = views_highcharts
 datestamp = 1342528276
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
